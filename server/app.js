@@ -105,6 +105,10 @@ app.get("/api/summoner/:puuid", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Riot API proxy server");
+});
+
 app.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
 });
