@@ -1,0 +1,48 @@
+{
+    "0" :{ 
+        "background": "blood-moon-jhin-lol-wild-rift-skin-splash-art-8k-wallpaper-7680x4320-uhdpaper.com-396.0_a.jpg",
+        "hue": ""
+    },
+    "1": { 
+        "background": "dark-cosmic-erasure-jhin-lol-skin-splash-art-8k-wallpaper-uhdpaper.com-679@1@l.jpg",
+        "hue": ""
+    },
+    "2": { 
+        "background": "dark-cosmic-jhin-splash-art-lol-4K-87.jpg",
+        "hue": ""
+
+    },
+    "3": { 
+        "background": "dream-dragon-yasuo-lol-skin-splash-art-dragonmancer-8k-wallpaper-7680x4320-uhdpaper.com-271.1_c.jpg",
+        "hue": "hue-rotate[25deg]"
+
+    },
+    "4": { 
+        "background": "galaxy-slayer-zed-lol-wild-rift-splash-art-8k-wallpaper-7680x4320-uhdpaper.com-582.1_a.jpg",
+        "hue": ""
+    },
+    "5": { 
+        "background": "immortal-journey-zed-lol-skin-splash-art-8k-wallpaper-uhdpaper.com-596@1@l.jpg",
+        "hue": ""
+
+    },
+    "6": { 
+        "background": "spirit-blossom-kindred-lol-splash-art-uhdpaper.com-8K-7.2283.jpg",
+        "hue": "-hue-rotate[30deg]"
+    },
+    "7": { 
+        "background": "winterblessed-hwei-lol-skin-splash-art-8k-wallpaper-uhdpaper.com-76@1@n.jpg",
+        "hue": ""
+    },
+    "8": { 
+        "background": "yasuo-lol-splash-art-uhdpaper.com-4K-638.jpg",
+        "hue": "hue-rotate[25deg]"
+    },
+    "9": { 
+        "background": "varus-lol-arctic-ops-splash-art-uhdpaper.com-4K-323.jpg",
+        "hue": "hue-rotate[15deg]"
+    }
+
+
+
+}
