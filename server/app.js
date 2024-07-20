@@ -31,11 +31,8 @@ app.use(cors(corsOptions));
 
 const apiKey = process.env.RIOT_KEY;
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, "../client/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+app.use("/", (req, res) => {
+  res.send("<h1>Welcome to the Riot API proxy server</h1>");
 });
 
 app.get("/api/account/:playerName/:tag", async (req, res) => {
@@ -110,9 +107,7 @@ app.get("/api/summoner/:puuid", async (req, res) => {
   }
 });
 
-app.use("/", (req, res) => {
-  res.send("Welcome to the Riot API proxy server");
-});
+
 
 app.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
