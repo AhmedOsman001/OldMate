@@ -25,7 +25,9 @@ app.use(xss());
 app.use(cors());
 
 const apiKey = process.env.RIOT_KEY;
-
+app.get("/" , (req,res) => {
+  res.send("Hello World")
+})
 app.get("/api/account/:playerName/:tag", async (req, res) => {
   const { playerName, tag } = req.params;
 
