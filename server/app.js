@@ -31,8 +31,9 @@ app.use(cors(corsOptions));
 
 const apiKey = process.env.RIOT_KEY;
 
-app.use("/", (req, res) => {
-  res.send("<h1>Welcome to the Riot API proxy server</h1>");
+app.use("/:id", (req, res) => {
+  const ss = req.params;
+  res.send(ss);
 });
 
 app.get("/api/account/:playerName/:tag", async (req, res) => {
