@@ -24,7 +24,7 @@ app.use(helmet());
 app.use(xss());
 app.use(cors());
 
-const apiKey = "RGAPI-76a44111-e7ce-4d31-ac3a-60d05a9a0ffb";
+const apiKey = "RGAPI-73eb568a-0146-4921-a6ff-ee601de100f4";
 
 app.get("/" , (req,res) => {
   res.send("Hello World")
