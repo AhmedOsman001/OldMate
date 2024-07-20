@@ -13,18 +13,18 @@ const rateLimit = require("express-rate-limit");
 const PORT = 3001;
 
 app.set("trust proxy", 1);
-// app.use(
-//   rateLimit({
-//     windowMs: 5 * 60 * 1000,
-//     max: 100,
-//   })
-// );
+app.use(
+  rateLimit({
+    windowMs: 5 * 60 * 1000,
+    max: 100,
+  })
+);
 
 app.use(helmet());
 app.use(xss());
 app.use(cors());
 
-const apiKey = "RGAPI-73eb568a-0146-4921-a6ff-ee601de100f4";
+const apiKey = process.env.RIOT_KEY;
 
 app.get("/" , (req,res) => {
   res.send("Hello World")
