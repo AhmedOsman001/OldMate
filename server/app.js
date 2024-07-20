@@ -25,7 +25,7 @@ app.use(xss());
 app.use(cors());
 
 const apiKey = process.env.RIOT_KEY;
-
+console.log(apiKey);
 app.get("/" , (req,res) => {
   res.send("Hello World")
 })
