@@ -12,6 +12,11 @@ const rateLimit = require("express-rate-limit");
 
 const PORT = 3001;
 
+const corsOptions = {
+  origin: ["http://localhost:5173", "https://old-mate-client.vercel.app"], // Add both your local dev URL and deployed URL
+  optionsSuccessStatus: 200,
+};
+
 app.set("trust proxy", 1);
 app.use(
   rateLimit({
@@ -22,15 +27,15 @@ app.use(
 
 app.use(helmet());
 app.use(xss());
-app.use(cors());
+app.use(cors(corsOptions));
 
 const apiKey = process.env.RIOT_KEY;
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
 app.get("/api/account/:playerName/:tag", async (req, res) => {
