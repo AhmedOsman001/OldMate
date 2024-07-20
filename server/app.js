@@ -13,7 +13,7 @@ const rateLimit = require("express-rate-limit");
 const PORT = 3001;
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://old-mate-client.vercel.app"], // Add both your local dev URL and deployed URL
+  origin: "https://old-mate-client.vercel.app", // Add both your local dev URL and deployed URL
   optionsSuccessStatus: 200,
 };
 
