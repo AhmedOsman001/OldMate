@@ -37,7 +37,7 @@ const Summoner = () => {
 		setParticipantsInfo(null)
 		try {
 
-			const activeGame = await axios.get(`http://localhost:3001/api/active-game/${puuid}`)
+			const activeGame = await getActiveGame(puuid)
 			console.log("active game");
 			setParticipantsInfo(activeGame.data.participants)
 

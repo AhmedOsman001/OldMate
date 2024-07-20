@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { getAccount } from '../api';
 
 const Search = () => {
   const [inputData, setInputData] = useState('');
@@ -18,7 +18,7 @@ const Search = () => {
       return;
     }
     try {
-      const response = await axios.get(`http://localhost:3001/api/account/${playerName}/${tag}`);
+      const response = await getAccount(playerName, tag);
       const data = response.data;
       const playerData = {
         playerName: data.gameName,
@@ -32,6 +32,7 @@ const Search = () => {
       navigate(`/summoner/eun1/${data.gameName}-${data.tagLine}`);
     } catch (error) {
       setError("Player Not Found!");
+      console.log(error);
     }
   };
 
