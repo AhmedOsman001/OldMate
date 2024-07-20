@@ -19,17 +19,17 @@ const Search = () => {
     }
     try {
       const response = await getAccount(playerName, tag);
-      const data = response.data;
+      console.log(response);
       const playerData = {
-        playerName: data.gameName,
-        tagLine: data.tagLine,
-        puuid: data.puuid,
+        playerName: response.gameName,
+        tagLine: response.tagLine,
+        puuid: response.puuid,
       };
 
       // Store player data in localStorage
       localStorage.setItem('player', JSON.stringify(playerData));
 
-      navigate(`/summoner/eun1/${data.gameName}-${data.tagLine}`);
+      navigate(`/summoner/eun1/${response.gameName}-${response.tagLine}`);
     } catch (error) {
       setError("Player Not Found!");
       console.log(error);

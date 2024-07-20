@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
-import axios from "axios";
 import Loading from "./Loading";
-import { getSummoner } from "../api";
+import { getSummoner, getActiveGame } from "../api";
+
 
 import MyContext from "../contexts/PlayerContext";
 
@@ -33,13 +33,12 @@ const Summoner = () => {
 
 
 
-	const getActiveGame = async () => {
+	const handleCurrentGame = async () => {
 		setParticipantsInfo(null)
 		try {
-
-			const activeGame = await getActiveGame(puuid)
-			console.log("active game");
-			setParticipantsInfo(activeGame.data.participants)
+			const response = await getActiveGame(puuid)
+			console.log(response);
+			setParticipantsInfo(response.participants)
 
 		} catch (error) {
 			console.log("error accoured", error)
@@ -63,7 +62,7 @@ const Summoner = () => {
 						<span className="ml-2 text-gray-400">#EUNE</span>
 					</div>
 
-					<button onClick={getActiveGame} className="ml-auto bg-blue-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-600">
+					<button onClick={handleCurrentGame} className="ml-auto bg-blue-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-600">
 						Update
 					</button>
 				</div>
