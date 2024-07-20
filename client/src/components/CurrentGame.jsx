@@ -6,7 +6,6 @@ import MatchHistory from './MatchHistory';
 
 const CurrentGame = ({ participantsInfo, puuid, matches, clicked }) => {
   const [expandedRow, setExpandedRow] = useState(null);
-  console.log(participantsInfo);
   const handleExpand = (index) => {
     setExpandedRow(expandedRow === index ? null : index);
   };

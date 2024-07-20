@@ -37,7 +37,6 @@ const Summoner = () => {
 		setParticipantsInfo(null)
 		try {
 			const response = await getActiveGame(puuid)
-			console.log(response);
 			setParticipantsInfo(response.participants)
 
 		} catch (error) {
