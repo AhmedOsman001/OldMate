@@ -24,7 +24,7 @@ app.use(helmet());
 app.use(xss());
 app.use(cors());
 
-const apiKey = process.env.RIOT_KEY;
+const apiKey = "RGAPI-76a44111-e7ce-4d31-ac3a-60d05a9a0ffb";
 
 app.get("/" , (req,res) => {
   res.send("Hello World")
